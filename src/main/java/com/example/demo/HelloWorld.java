@@ -1,13 +1,16 @@
-package demo;
+package com.example.demo;
 
-import org.springframework.stereotype.Component;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * Created by jt on 3/11/15.
- */
-@Component
+@Controller
+@EnableAutoConfiguration
 public class HelloWorld {
-    public void sayHello(){
-        System.out.println("Hello World!!!!");
-    }
+@RequestMapping("/hello")
+@ResponseBody
+public String sayHello() {
+return "Hello World Developer!";
+}
 }
