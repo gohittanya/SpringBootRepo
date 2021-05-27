@@ -11,6 +11,6 @@ public class HelloWorld {
 @RequestMapping("/hello")
 @ResponseBody
 public String sayHello() {
-return "Hello World Developer!";
+return "Hello World!";
 }
 }
